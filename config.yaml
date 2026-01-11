@@ -1,0 +1,94 @@
+# ============================================================
+# SEO CONTENT GENERATOR - CONFIGURATION FILE
+# ============================================================
+# Usage: python main.py
+# Preview: python main.py -p
+# ============================================================
+
+# Site Information
+site:
+  name: "TechReview"
+  url: "https://example.com"
+  author: "Content Team"
+
+# Page main title (H1)
+# Important for SEO, should contain the primary keyword
+title: "Best Web Hosting Providers 2025"
+
+# Introduction paragraph word count
+intro_words: 60
+
+# Conclusion paragraph word count
+conclusion_words: 50
+
+# SEO Settings
+seo:
+  # Primary keyword - will be used naturally throughout the content
+  primary_keyword: "web hosting"
+
+  # Secondary keywords - will be used in relevant sections
+  secondary_keywords:
+    - "server hosting"
+    - "VPS hosting"
+    - "shared hosting"
+    - "SSL certificate"
+
+  # Target keyword density (%)
+  keyword_density: 2.0
+
+  # Content tone: informative, conversational, professional
+  tone: "informative"
+
+  # Target audience description
+  target_audience: "Entrepreneurs and small businesses looking to create a website"
+
+# Sections (H2) - individual word count for each
+sections:
+  - heading: "What is Shared Hosting?"
+    words: 120
+  - heading: "VPS vs Dedicated Server Differences"
+    words: 120
+  - heading: "Things to Consider When Choosing Hosting"
+    words: 100
+
+# Comparison table settings
+table:
+  enabled: true
+  rows: 5
+  # Dynamic column definitions
+  columns:
+    - name: "item"
+      header: "Provider"
+      placeholder: "ITEM"
+    - name: "value"
+      header: "Price"
+      placeholder: "VALUE"
+    - name: "feature"
+      header: "Feature"
+      placeholder: "FEATURE"
+    - name: "rating"
+      header: "Rating"
+      placeholder: "RATING"
+      type: "stars" # stars: converts number to star icons
+
+# AI Model selection
+# openai/gpt-4o-mini : Fast and economical (~$0.0001/section)
+# openai/gpt-4o      : Higher quality but slower and expensive (~$0.003/section)
+model: "openai/gpt-4o-mini"
+
+# Output format: html or md
+output: "md"
+
+# Content language (AI will generate content in this language)
+# Examples: English, Turkish, French, German, Spanish, etc.
+language: "English"
+
+# AI System Prompt (optional - default will be used)
+# system_prompt: |
+#   You are an experienced SEO content writer...
+
+# Placeholder settings
+# Placeholders to be used in content
+placeholders:
+  item_prefix: "ITEM" # For product/service name: [ITEM_1], [ITEM_2]...
+  value_prefix: "VALUE" # For value/price: [VALUE_1], [VALUE_2]...

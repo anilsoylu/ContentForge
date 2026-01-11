@@ -1,0 +1,30 @@
+# Environment
+.env
+.env.local
+
+# Claude Code
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Üretilen içerikler (opsiyonel - commit etmek istersen kaldır)
+content/
