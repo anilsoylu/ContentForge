@@ -104,7 +104,8 @@ def build_full_md(
     content: GeneratedContent,
     headings: list[str],
     keywords: list[str] | None = None,
-    table_header: str = "Comparison"
+    table_header: str = "Comparison",
+    conclusion_header: str = "Conclusion"
 ) -> str:
     """Combine all content into Markdown format."""
     lines = [
@@ -131,7 +132,7 @@ def build_full_md(
         ])
 
     lines.extend([
-        "## Conclusion",
+        f"## {conclusion_header}",
         "",
         text_to_md(content.conclusion, keywords)
     ])

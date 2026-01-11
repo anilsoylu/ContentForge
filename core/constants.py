@@ -42,3 +42,33 @@ FORMAT RULES:
 
 # Required config fields
 REQUIRED_CONFIG_FIELDS = ["title", "intro_words", "conclusion_words", "sections"]
+
+# Language translations for static headers
+TRANSLATIONS = {
+    "Turkish": {
+        "comparison": "Karşılaştırma",
+        "conclusion": "Sonuç",
+    },
+    "German": {
+        "comparison": "Vergleich",
+        "conclusion": "Fazit",
+    },
+    "French": {
+        "comparison": "Comparaison",
+        "conclusion": "Conclusion",
+    },
+    "Spanish": {
+        "comparison": "Comparación",
+        "conclusion": "Conclusión",
+    },
+    "English": {
+        "comparison": "Comparison",
+        "conclusion": "Conclusion",
+    },
+}
+
+
+def get_translation(language: str, key: str) -> str:
+    """Get translation for a key in the specified language."""
+    lang_dict = TRANSLATIONS.get(language, TRANSLATIONS["English"])
+    return lang_dict.get(key, TRANSLATIONS["English"][key])

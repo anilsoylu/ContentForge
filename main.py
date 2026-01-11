@@ -28,6 +28,7 @@ from core import (
     load_config,
     save_default_config,
 )
+from core.constants import get_translation
 from generators.html import build_full_html, build_table_html
 from generators.markdown import build_full_md, build_table_md
 from generators.prompts import (
@@ -225,13 +226,18 @@ async def run_async(args: argparse.Namespace) -> None:
     content = await generate_all_content(api_key, config)
 
     # Build output based on format
+    table_header = get_translation(config.language, "comparison")
+    conclusion_header = get_translation(config.language, "conclusion")
+
     if config.output == "md":
         full_content = build_full_md(
-            config.title, content, config.headings, config.seo.all_keywords
+            config.title, content, config.headings, config.seo.all_keywords,
+            table_header=table_header, conclusion_header=conclusion_header
         )
     else:
         full_content = build_full_html(
-            config.title, content, config.headings, config.seo.all_keywords
+            config.title, content, config.headings, config.seo.all_keywords,
+            table_header=table_header, conclusion_header=conclusion_header
         )
 
     # Save

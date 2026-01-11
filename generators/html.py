@@ -117,7 +117,8 @@ def build_full_html(
     content: GeneratedContent,
     headings: list[str],
     keywords: list[str] | None = None,
-    table_header: str = "Comparison"
+    table_header: str = "Comparison",
+    conclusion_header: str = "Conclusion"
 ) -> str:
     """Combine all content into HTML format."""
     lines = [
@@ -149,7 +150,7 @@ def build_full_html(
 
     lines.extend([
         '<div class="conclusion">',
-        '<h2>Conclusion</h2>',
+        f'<h2>{conclusion_header}</h2>',
         text_to_html(content.conclusion, keywords),
         '</div>'
     ])
