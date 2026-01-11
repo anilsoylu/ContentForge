@@ -2,6 +2,12 @@
 
 AI-powered SEO content generator with parallel processing. Generate blog articles, comparison tables, and optimized content at scale.
 
+---
+
+**[Features](#features)** · **[Installation](#installation)** · **[Configuration](#configuration)** · **[Usage](#usage)** · **[Cost Estimation](#cost-estimation)** · **[License](#license)**
+
+---
+
 ## Features
 
 - **Parallel Generation** - All content sections generated simultaneously using asyncio
