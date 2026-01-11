@@ -72,9 +72,10 @@ table:
       type: "stars" # stars: converts number to star icons
 
 # AI Model selection
-# openai/gpt-4o-mini : Fast and economical (~$0.0001/section)
-# openai/gpt-4o      : Higher quality but slower and expensive (~$0.003/section)
-model: "openai/gpt-4o-mini"
+# openai/gpt-4o-mini      : Fast and economical (~$0.0001/section)
+# openai/gpt-4o           : Higher quality but slower and expensive (~$0.003/section)
+# openai/gpt-oss-20b:free : Free, 131K context, good for long content
+model: "openai/gpt-oss-20b:free"
 
 # Output format: html or md
 output: "md"

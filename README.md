@@ -4,7 +4,7 @@ AI-powered SEO content generator with parallel processing. Generate blog article
 
 ---
 
-**[Features](#features)** · **[Installation](#installation)** · **[Configuration](#configuration)** · **[Usage](#usage)** · **[Cost Estimation](#cost-estimation)** · **[License](#license)**
+**[Features](#features)** · **[Installation](#installation)** · **[Configuration](#configuration)** · **[Usage](#usage)** · **[Supported Models](#supported-models)** · **[Cost Estimation](#cost-estimation)** · **[License](#license)**
 
 ---
 
@@ -130,6 +130,16 @@ contentforge/
 |-------|-------|--------------|----------|
 | `openai/gpt-4o-mini` | ~45 tps | ~$0.00012 | Bulk content, drafts |
 | `openai/gpt-4o` | ~30 tps | ~$0.003 | High-quality articles |
+| `openai/gpt-oss-20b:free` | ~40 tps | Free | Long content, testing |
+
+### Using Free Models
+
+To use free models (e.g., `gpt-oss-20b:free`), you need to enable data training in your OpenRouter account:
+
+1. Go to [OpenRouter Privacy Settings](https://openrouter.ai/settings/privacy)
+2. Enable **"Enable free endpoints that may train on inputs"**
+
+> **Note:** Free models may use your prompts and completions for training purposes.
 
 ## Cost Estimation
 

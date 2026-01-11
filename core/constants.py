@@ -18,6 +18,7 @@ API_TIMEOUT = 120  # seconds
 AVAILABLE_MODELS = {
     "1": ("openai/gpt-4o", "GPT-4o (higher quality, slower)"),
     "2": ("openai/gpt-4o-mini", "GPT-4o-mini (fast, economical)"),
+    "3": ("openai/gpt-oss-20b:free", "GPT-OSS-20B (free, 131K context)"),
 }
 
 # Compiled regex patterns (for performance)
